@@ -1,21 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.querySelector('.search input');
-    const livros = document.querySelectorAll('.livros');
-    const categoria = document.querySelector('padding h3');
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const livros = document.querySelectorAll('#livrosList li');
 
-    searchInput.addEventListener('input', function() {
-        const searchTerm = searchInput.value.toLowerCase();
+    livros.forEach(function(livro) {
+        const titulo = livro.querySelector('h3').textContent.toLowerCase();
+        const autor = livro.querySelector('h4').textContent.toLowerCase();
+        const categoria = livro.querySelector('p').textContent.toLowerCase();
 
-        livros.forEach(function(livro) {
-            const title = livro.querySelector('h4').textContent.toLowerCase();
-            const author = livro.querySelector('p').textContent.toLowerCase();
-            const category = livro.dataset.category ? livro.dataset.category.toLowerCase() : '';
-
-            if (title.includes(searchTerm) || author.includes(searchTerm) || category.includes(searchTerm)) {
-                livro.style.display = 'block';
-            } else {
-                livro.style.display = 'none';
-            }
-        });
+        if (titulo.includes(searchTerm) || autor.includes(searchTerm) || categoria.includes(searchTerm)) {
+            livro.style.display = '';
+        } else {
+            livro.style.display = 'none';
+        }
     });
 });
