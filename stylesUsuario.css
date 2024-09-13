@@ -1,0 +1,19 @@
+.profile {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.favorites {
+    list-style-type: none;
+    padding: 0;
+}
+
+.favorites li {
+    margin: 10px 0;
+}
