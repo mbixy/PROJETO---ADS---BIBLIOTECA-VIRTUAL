@@ -1,236 +1,94 @@
-!<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Biblioteca - Virtual</title>
-	<link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon-logo.png">
+    <title>Biblioteca Virtual | Inicio</title>
 </head>
 <body>
-	<header>
-		<div class="top"></div>	
-		<nav>
-			<div class="container">
-				<ul>
-					<li><a href="index.html">Inicio</a></li> <!--Encaminha para página inicial (só tera essa página...pois é apenas um "exemplo")-->
-					<li><a href="indexUsuario.html">Minha conta</a></li><!--Encaminha para página de usuário-->
-					<li><a href="indexConfigurações.html">Configurações</a></li><!--Encaminha para páginas deconfigurações (a discutir)-->
-				</ul>
+    <header>
+        <nav class="navindex">
+            <img src="img/logo.png" href="index.html" alt="Logo" class="logo">
+            <button class="button"  onclick="location.replace('login.html')">Login</button>
+            <button class="button"  onclick="location.replace('cadastro.html')">Cadastro</button>
+        </nav>
+        <img src="img/nav-biblioteca1.png" alt="">
+        <div class="linha-colorida"></div>
+        <div class="logo-inicio">
+            <img src="img/logo-deitada.png" alt="">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success button" type="submit">Buscar</button>
+              </form>
+        </div>
+    </header>
 
-				<div class="search"><!--Chamada do método que contem as condições de pesquisa-->
-					<form method="GET" action="#">
-						<input type="text" placeholder="Pesquisar um livro..."> <!--Barra de pesquisa (pesquisa por:categoria, titulo do livro e autor)-->
-						<input type="submit" value="">
-					</form>
-				</div>
-			</div>
-		</nav>
-	</header>
+    <main>
 
-	<section class="padding">
+        <h2 style="text-align: center;">Explore Nossos Livros</h2>
+        <p  style="text-align: center;">Aqui você pode encontrar livros de diversos gêneros para leitura online.</p>
 
-		<div class="container padding"> <!--bloco de administração dos cards-livros-->
-			<a href="#" class="logo"><img src="" alt="Nexus"></a> <!--logo da empresa NEXUS<3-->
+        <div class="livros">
+            <a href="livro.html?livro=1" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 1">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+            <a href="livro.html?livro=2" class="livro">
+                <img src="img/livro2.jpeg" alt="Capa do Livro 2">
+                <h2>A Culpa é das Estrelas</h2>
+                <h4>John Green</h4>
+            </a>
+            <a href="livro.html?livro=3" class="livro">
+                <img src="img/livro3.jpeg" alt="Capa do Livro 3">
+                <h2>As crônicas de Narnia</h2>
+                <h4>C.S.Lewis</h4>
+            </a> <a href="livro.html?livro=4" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 4">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+            <a href="livro.html?livro=5" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 5">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
 
-			<hr> 
+        </div>
+        <div class="livros">
+            <a href="livro.html?livro=6" class="livro">
+                <img src="img/livro4.jpeg" alt="Capa do Livro 6">
+                <h2>Harry Potter</h2>
+                <h4>A Pedra Filosofal</h4>
+            </a>
+            <a href="livro.html?livro=7" class="livro">
+                <img src="img/livro5.jpeg" alt="Capa do Livro 7">
+                <h2>É Assim que Acaba</h2>
+                <h4>Collen Hoover</h4>
+            </a>
+            <a href="livro.html?livro=8" class="livro">
+                <img src="img/livro6.jpeg" alt="Capa do Livro 8">
+                <h2>Os Bridgerton</h2>
+                <h4>O Duque e Eu</h4>
+            </a>
+            <a href="livro.html?livro=9" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 9">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+             <a href="livro.html?livro=10" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 10">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+        </div>
 
-			<h2 class="padding">Livros Em Destaque</h2>
 
-			<ul class="livros">
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro 1</h3>
-					<h4>Autor 2</h4>
-					<p>Categoria</p>
-				</li>
-				
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-				<li>
-
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-			</ul>
-
-		</div>
-
-		<div class="clear padding"></div>
-
-		<div class="info">
-			<div class="container">
-				<h1>Como Funciona?</h1><!--Bloco de informações (discutir com o grupo)-->
-				<p>Alugue seu livro online, e leia de sua casa!</p>
-			</div>
-		</div>
-
-		<div class="clear"></div>
-
-		<div class="container padding">
-			<h2>Recomendados</h2>
-
-			<ul class="livros">
-
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-				
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-				<li>
-					<a href="encaminha parara página de sipnose">
-						<div class="imghover"></div>
-						<img src="capa do livro">
-					</a>
-					<h3>Titulo do Livro</h3>
-					<h4>Autor</h4>
-					<p>Categoria</p>
-				</li>
-
-			</ul>
-
-			<hr>
-
-			<h2 class="padding">Editoras Favoritas</h2>
-
-			<ul class="editoras">
-				<li>
-					<h3>Intrinseca</h3>
-					<img src="img/editoras/editora (1).jpg" alt="Intrinseca" title="Intrinseca">
-				</li>
-
-				<li>
-					<h3>Sextante</h3>
-					<img src="img/editoras/editora (3).jpg" alt="Sextante" title="Sextante">
-				</li>
-
-				<li>
-					<h3>Arqueiro</h3>
-					<img src="img/editoras/editora (4).jpg" alt="Arqueiro" title="Arqueiro">
-				</li>
-
-				<li>
-					<h3>Galera</h3>
-					<img src="img/editoras/editora (5).jpg" alt="Galera" title="Galera">
-				</li>
-
-				<li>
-					<h3>Leya</h3>
-					<img src="img/editoras/editora (6).jpg" alt="Leya" title="Leya">
-				</li>
-
-				<li>
-					<h3>DarkSide</h3>
-					<img src="img/editoras/editora (7).jpg" alt="DarkSide" title="DarkSide">
-				</li>
-
-				<li>
-					<h3>Versus</h3>
-					<img src="img/editoras/editora (9).jpg" alt="Versus" title="Versus">
-				</li>
-
-				<li>
-					<h3>Pandorga</h3>
-					<img src="img/editoras/editora (10).jpg" alt="Pandorga" title="Pandorga">
-				</li>
-			</ul>
-		</div>
-	</section>
-
-	<footer>
-		<div class="container">
-			<span class="left">© 2024 TECH NEXUS</span>
-			<span class="right">Alugue seu livro e leia online!</span>
-		</div>
-	</footer>
+    </main>
+    <footer>
+        <p>&copy; 2024 Biblioteca Virtual</p>
+    </footer>
 </body>
 </html>

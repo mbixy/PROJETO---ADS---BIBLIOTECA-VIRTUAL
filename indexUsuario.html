@@ -1,33 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Conta</title>
-    <link rel="stylesheet" href="./styles/stylesUsuario.css">
+    <link rel="stylesheet" href="stylesUsuario.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon-logo.png">
+    <title>Biblioteca Virtual | Inicio</title>
 </head>
 <body>
     <header>
-        <div class="top"></div>    
-        <nav>
-            <div class="container">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="indexUsuario.html">Minha conta</a></li>
-                    <li><a href="indexConfiguracoes.html">Configurações</a></li>
-                </ul>
+        <nav class="navindex">
+            <img src="img/logo.png" href="index.html" alt="Logo" class="logo">
+            <div id="userOptions" class="user-options" style="display: none;">
             </div>
         </nav>
+
+        </div>
+        <img src="img/nav-biblioteca1.png" alt="">
+        <div class="linha-colorida"></div>
+        <div class="logo-inicio">
+            <img src="img/logo-deitada.png" alt="">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success button" type="submit">Buscar</button>
+            </form>
+        </div>
     </header>
-    <div class="profile">
-        <img src="foto_usuario.jpg" alt="Foto do Usuário">
-        <h1>Nome do Usuário</h1>
-        <h2>Favoritos</h2>
-        <ul class="favorites">
-            <li>Favorito 1</li>
-            <li>Favorito 2</li>
-            <li>Favorito 3</li>
-        </ul>
+
+    <div class="circle" onclick="toggleOptions()"></div> <!--Conta Usuário-->
+    <div class="options" id="options">
+        <a href="configuracoes.html">Configurações</a>
+        <a href="favoritos.html">Favoritos</a>
     </div>
+
+    <main>
+
+        <h2 style="text-align: center;">Explore Nossos Livros</h2>
+        <p  style="text-align: center;">Aqui você pode encontrar livros de diversos gêneros para leitura online.</p>
+
+        <div class="livros">
+            <a href="livro.html?livro=1" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 1">
+                <h2>Amanhecer Parte2</h2>
+                <button class="buttonLivro" onclick="addFavorite(this)">Adicionar aos Favoritos</button>
+                <h4>A saga de Crepusculo</h4>
+
+            </a>
+            <a href="livro.html?livro=2" class="livro">
+                <img src="img/livro2.jpeg" alt="Capa do Livro 2">
+                <h2>A Culpa é das Estrelas</h2>
+                <h4>John Green</h4>
+            </a>
+            <a href="livro.html?livro=3" class="livro">
+                <img src="img/livro3.jpeg" alt="Capa do Livro 3">
+                <h2>As crônicas de Narnia</h2>
+                <h4>C.S.Lewis</h4>
+            </a> <a href="livro.html?livro=1" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 4">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+            <a href="livro.html?livro=1" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 5">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+
+        </div>
+        <div class="livros">
+            <a href="livro.html?livro=1" class="livro">
+                <img src="img/livro4.jpeg" alt="Capa do Livro 6">
+                <h2>Harry Potter</h2>
+                <h4>A Pedra Filosofal</h4>
+            </a>
+            <a href="livro.html?livro=2" class="livro">
+                <img src="img/livro5.jpeg" alt="Capa do Livro 7">
+                <h2>É Assim que Acaba</h2>
+                <h4>Collen Hoover</h4>
+            </a>
+            <a href="livro.html?livro=3" class="livro">
+                <img src="img/livro6.jpeg" alt="Capa do Livro 8">
+                <h2>Os Bridgerton</h2>
+                <h4>O Duque e Eu</h4>
+            </a>
+            <a href="livro.html?livro=1" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 9">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+             <a href="livro.html?livro=1" class="livro">
+                <img src="img/livro1.jpeg" alt="Capa do Livro 10">
+                <h2>Amanhecer Parte2</h2>
+                <h4>A saga de Crepusculo</h4>
+            </a>
+        </div>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Biblioteca Virtual</p>
+    </footer>
 </body>
+<script src="script.js"></script>
 </html>

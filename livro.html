@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Livro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="position: fixed;">
+      <nav class="navLogin">
+        <a href="index.html">
+        <img src="img/logo.png" style="cursor: pointer;"  alt="Logo" class="logo">
+        </a>
+      </nav> 
+    </header>
+    <main style="margin-top: 100px;">
+        <div class="livro-detalhe" >
+            <img id="capa" src="" alt="Capa do Livro">
+            <h2 id="titulo">Título do Livro</h2>
+            <p id="descricao">Descrição do livro.</p>
+            <a href="https://static.tumblr.com/fm0uxyf/wvRmnzdda/amanhecer.pdf" class="buttonLivro">Ler Livro</a>
+        </div>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const livro = params.get('livro');
+        
+        const livros = {
+            1: {
+                titulo: "Amanhecer Parte2",
+                idade:"18",
+                descricao: "Estar irrevogavelmente apaixonada por um vampiro é tanto uma fantasia como um pesadelo, costurados em uma perigosa realidade para Bella Swan. Empurrada em uma direção por sua intensa paixão por Edward Cullen, e em outra por sua profunda ligação com o lobisomem Jacob Black, ela resistiu a um tumultuado ano de tentação, perda e conflito até o momento da decisão definitiva. A escolha entre fazer parte do obscuro, mas sedutor, mundo dos imortais ou permanecer vivendo como humana se tornou o marco que poderá transformar o destino dos dois clãs: vampiros e lobisomens.Agora que Bella tomou sua decisão, uma corrente de acontecimentos sem precedentes se desdobrará, com consequências devastadoras. No momento em que as feridas parecem prontas para ser cicatrizadas, e os desgastantes confrontos da vida de Bella, resolvidos, isso pode significar a destruição. Para todos. Para sempre.",
+                capa: "img/livro1.jpeg",
+                link: "https://intrinseca.com.br/upload/download/release_imp_amanhecer.pdf"
+            },
+            2: {
+                titulo: "A Culpa é das Estrelas",
+                idade:"18",
+                descricao: "Descrição do Livro 2.",
+                capa: "imagens/livro2.jpg",
+                link: "link-para-livro2.pdf"
+            },
+            3: {
+                titulo: "As crônicas de Narnia",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            },
+            4: {
+                titulo: "Livro 4",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            },
+            5: {
+                titulo: "Livro 5",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            },
+             6: {
+                titulo: "Livro 6",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            },
+            7: {
+                titulo: "Livro 7",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            },
+            8: {
+                titulo: "Livro 8",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            },
+            9: {
+                titulo: "Livro 9",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            },
+            10: {
+                titulo: "Livro 10",
+                idade:"18",
+                descricao: "Descrição do Livro 3.",
+                capa: "imagens/livro3.jpg",
+                link: "link-para-livro3.pdf"
+            }
+        };
+
+        if (livros[livro]) {
+            document.getElementById("titulo").textContent = livros[livro].titulo;
+            document.getElementById("descricao").textContent = livros[livro].descricao;
+            document.getElementById("capa").src = livros[livro].capa;
+            document.querySelector('.button').href = livros[livro].link;
+        }
+    </script>
+</body>
+</html>
+
